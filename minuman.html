@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyzaa Cafe's</title>
+</head>
+
+<body class="bg-[#ffb6c1]">
+
+<!-- HEADER -->
+<header class="bg-[#FCF8F1]/30 backdrop-blur-md">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+
+            <!-- BRAND TEXT -->
+            <a href="#" class="flex-shrink-0">
+                <h1 class="text-2xl font-bold text-gray-900 tracking-wide">
+                    Lyzaa Cafe's
+                </h1>
+            </a>
+
+            <button class="inline-flex p-2 text-black lg:hidden hover:bg-gray-100 rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                </svg>
+            </button>
+
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="makanan.html" class="text-black hover:text-opacity-80">Makanan</a>
+                <a href="minuman.html" class="text-black hover:text-opacity-80">Minuman</a>
+                <a href="snack.html" class="text-black hover:text-opacity-80">Snack</a>
+            </nav>
+
+            <a href="ordernow.html" class="hidden lg:inline-flex px-5 py-2.5 text-base font-semibold text-white bg-black rounded-full hover:bg-yellow-300 hover:text-black">
+                Order Now
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Produk1 -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Abroad Drink's</h2>
+
+      <p class="mt-4 max-w-md text-gray-500">
+        This drink comes from various countries in the world and each drink has a unique taste..
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- THAI TEA -->
+      <li>
+        <button onclick="beli('Thai Tea', 15553)" class="group block overflow-hidden text-left w-full">
+          <img src="Thai Iced Tea (Sweet, Spiced & Creamy).jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Thai Tea</h3>
+            <p class="text-xs text-gray-700">thai tea adalah minuman segar asal thailand yang memiliki cita rasa teh khas thailand</p>
+            <p class="mt-2 text-gray-900">Rp15.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- MANGO SMOOTHIES -->
+      <li>
+        <button onclick="beli('Mango Smoothies', 21890)" class="group block overflow-hidden text-left w-full">
+          <img src="Mango Lassi _ The Green Creator.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Mango Smoothies</h3>
+            <p class="text-xs text-gray-700">Minuman mangga kental yang creamy dan menyegarkan.</p>
+            <p class="mt-2 text-gray-900">Rp21.890</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- BISCOFF MILKSHAKE -->
+      <li>
+        <button onclick="beli('Biscoff Milkshake', 27780)" class="group block overflow-hidden text-left w-full">
+          <img src="Lotus Biscoff Milkshake Recipe.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Lotus Biscoff Milkshake</h3>
+            <p class="text-xs text-gray-700">Milkshake creamy dengan rasa karamel khas biskuit biscoff.</p>
+            <p class="mt-2 text-gray-900">Rp27.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- DALGONA -->
+      <li>
+        <button onclick="beli('Dalgona Coffee', 16573)" class="group block overflow-hidden text-left w-full">
+          <img src="Dalgona Coffee.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Dalgona Coffee Creamy</h3>
+            <p class="text-xs text-gray-700">Kopi dengan foam tebal creamy dan rasa manis pahit seimbang.</p>
+            <p class="mt-2 text-gray-900">Rp16.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- Produk2 -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Tradisional Drink's</h2>
+
+      <p class="mt-4 max-w-md text-gray-500">
+        Local drinks have a distinctive Indonesian taste and appearance.
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- CENDOL -->
+      <li>
+        <button onclick="beli('Es Cendol', 9553)" class="group block overflow-hidden text-left w-full">
+          <img src="Es Cendol_ Minuman Tradisional Khas Indonesia yang Segar dan Melegenda.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Es Cendol</h3>
+            <p class="text-xs text-gray-700">Minuman tradisional dengan cendol hijau, santan, dan gula merah.</p>
+            <p class="mt-2 text-gray-900">Rp9.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- BERAS KENCUR -->
+      <li>
+        <button onclick="beli('Beras Kencur', 7690)" class="group block overflow-hidden text-left w-full">
+          <img src="Jamu beras kencur.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Jamu Beras Kencur</h3>
+            <p class="text-xs text-gray-700">Minuman herbal Indonesia dengan rempah kaya manfaat.</p>
+            <p class="mt-2 text-gray-900">Rp7.690</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- WEDANG UWUH -->
+      <li>
+        <button onclick="beli('Wedang Uwuh', 5780)" class="group block overflow-hidden text-left w-full">
+          <img src="Traditional Drink _Wedang Uwuh_.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Wedang Uwuh</h3>
+            <p class="text-xs text-gray-700">Minuman herbal merah hangat dengan aroma rempah kuat.</p>
+            <p class="mt-2 text-gray-900">Rp5.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- MADU KUNYIT ASAM -->
+      <li>
+        <button onclick="beli('Madu Kunyit Asam', 6573)" class="group block overflow-hidden text-left w-full">
+          <img src="5 Resep Jamu Iris Kunyit Sederhana yang Ampuh untuk Mengatasi Kolesterol dan Asam Urat - Copy.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Madu Kunyit Asam</h3>
+            <p class="text-xs text-gray-700">Minuman sehat berwarna keemasan dengan rasa manis segar.</p>
+            <p class="mt-2 text-gray-900">Rp6.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- TOMBOL KERANJANG -->
+<button onclick="document.getElementById('keranjangPopup').classList.remove('hidden')" 
+class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-xl">
+  🛒 Keranjang
+</button>
+
+<!-- POPUP KERANJANG -->
+<div id="keranjangPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl">
+    <h2 class="text-xl font-bold mb-4">Keranjang Belanja</h2>
+
+    <div id="isiKeranjang" class="max-h-60 overflow-y-auto border p-3 rounded"></div>
+
+    <p class="text-lg font-semibold mt-4">Total: <span id="totalHarga">Rp0</span></p>
+
+    <div class="flex justify-end gap-3 mt-4">
+      <button onclick="document.getElementById('keranjangPopup').classList.add('hidden')" class="px-4 py-2 bg-gray-300 rounded-md">Tutup</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- SCRIPT KERANJANG -->
+<script>
+let keranjang = [];
+
+function beli(nama, harga) {
+    const item = keranjang.find(i => i.nama === nama);
+    if (item) {
+        item.jumlah++;
+    } else {
+        keranjang.push({ nama, harga, jumlah: 1 });
+    }
+    tampilkanKeranjang();
+}
+
+function tampilkanKeranjang() {
+    let html = "";
+    let total = 0;
+
+    keranjang.forEach(item => {
+        total += item.harga * item.jumlah;
+
+        html += `
+          <div class="flex justify-between border-b py-2">
+              <span>${item.nama} x ${item.jumlah}</span>
+              <span>Rp${(item.harga * item.jumlah).toLocaleString()}</span>
+          </div>
+        `;
+    });
+
+    document.getElementById("isiKeranjang").innerHTML = html;
+    document.getElementById("totalHarga").innerText = "Rp" + total.toLocaleString();
+}
+</script>
+
+</body>
+</html>
+

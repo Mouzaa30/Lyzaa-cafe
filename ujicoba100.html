@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyzaa Cafe's</title>
+</head>
+
+<body class="bg-white">
+
+<!-- HEADER -->
+<header class="bg-[#FCF8F1]/30 backdrop-blur-md">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+
+            <a href="#" class="flex-shrink-0">
+                <h1 class="text-2xl font-bold text-black">Lyzaa Cafe's</h1>
+            </a>
+
+            <button class="inline-flex p-2 text-black lg:hidden hover:bg-gray-100 rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                </svg>
+            </button>
+
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="makanan.html" class="text-black hover:text-opacity-80">Makanan</a>
+                <a href="minuman.html" class="text-black hover:text-opacity-80">Minuman</a>
+                <a href="snack.html" class="text-black hover:text-opacity-80">Snack</a>
+            </nav>
+
+            <button id="open-cart" class="hidden lg:inline-flex px-5 py-2.5 text-base font-semibold text-white bg-black rounded-full hover:bg-yellow-300 hover:text-black">
+                Cart
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- =============================== -->
+<!-- KERANJANG BELANJA FLOATING -->
+<!-- =============================== -->
+<div id="cart-box" class="fixed top-20 right-5 w-80 bg-white rounded-2xl shadow-xl p-4 border hidden z-50">
+    <div class="flex justify-between items-center pb-3 border-b">
+        <h2 class="text-lg font-semibold">Keranjang Belanja</h2>
+        <button id="close-cart" class="text-red-600 text-xl font-bold">&times;</button>
+    </div>
+
+    <ul id="cart-items" class="mt-4 space-y-2 max-h-60 overflow-y-auto"></ul>
+
+    <div class="mt-4 pt-3 border-t">
+        <p class="font-semibold text-gray-800">Total: <span id="cart-total">0</span></p>
+        <button class="w-full mt-3 py-2 bg-black text-white rounded-lg hover:bg-yellow-300 hover:text-black">
+            Checkout
+        </button>
+    </div>
+</div>
+
+
+
+
+<!-- =============================== -->
+<!-- PRODUK 1 -->
+<!-- =============================== -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Snack's</h2>
+      <p class="mt-4 max-w-md text-gray-500">
+        Snack A delicious and crunchy snack that's perfect to enjoy anytime.
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Churros -->
+      <li>
+        <button onclick="addToCart('Churros', 25553)" class="group block overflow-hidden w-full text-left">
+          <img src="Gluten free & Vegan Churros.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Churros</h3>
+            <p class="text-xs text-gray-700">Camilan manis renyah dan lembut.</p>
+            <p class="font-bold text-gray-900 mt-2">25.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Corn Salad -->
+      <li>
+        <button onclick="addToCart('Corn Salad', 37790)" class="group block overflow-hidden w-full text-left">
+          <img src="Grilled Corn Salad.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Grilled Corn Salad</h3>
+            <p class="text-xs text-gray-700">Jagung panggang segar & smoky.</p>
+            <p class="font-bold text-gray-900 mt-2">37.790</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Crepes -->
+      <li>
+        <button onclick="addToCart('Chocolate Crepes', 15780)" class="group block overflow-hidden w-full text-left">
+          <img src="handmade chocolate-filled rolled crêpes - Copy - Copy.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Chocolate Crepes</h3>
+            <p class="text-xs text-gray-700">Crêpes gulung isi cokelat creamy.</p>
+            <p class="font-bold text-gray-900 mt-2">15.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Oreo Ice Cream -->
+      <li>
+        <button onclick="addToCart('Helado de Oreo', 16573)" class="group block overflow-hidden w-full text-left">
+          <img src="Helado de Oreo.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Helado de Oreo</h3>
+            <p class="text-xs text-gray-700">Es krim oreo creamy & crunchy.</p>
+            <p class="font-bold text-gray-900 mt-2">16.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- =============================== -->
+<!-- PRODUK 2 -->
+<!-- =============================== -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Snack's</h2>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Burger Donuts -->
+      <li>
+        <button onclick="addToCart('Burger Donuts', 29553)" class="group block overflow-hidden w-full text-left">
+          <img src="Burger Donuts.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Burger Donuts</h3>
+            <p class="text-xs text-gray-700">Burger donat unik gurih & manis.</p>
+            <p class="font-bold text-gray-900 mt-2">29.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Bao Buns -->
+      <li>
+        <button onclick="addToCart('Bao Buns', 27690)" class="group block overflow-hidden w-full text-left">
+          <img src="Gluten-Free Bao Buns [Steamed Chinese Baozi].jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Bao Buns</h3>
+            <p class="text-xs text-gray-700">Lembut dengan isian juicy.</p>
+            <p class="font-bold text-gray-900 mt-2">27.690</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Pancake -->
+      <li>
+        <button onclick="addToCart('Pancake', 25780)" class="group block overflow-hidden w-full text-left">
+          <img src="pancake.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Pancake</h3>
+            <p class="text-xs text-gray-700">Fluffy & manis.</p>
+            <p class="font-bold text-gray-900 mt-2">25.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Waffle -->
+      <li>
+        <button onclick="addToCart('Waffle', 26673)" class="group block overflow-hidden w-full text-left">
+          <img src="waffle.jpg" class="h-[350px] w-full object-cover">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Waffle</h3>
+            <p class="text-xs text-gray-700">Renyah dan lembut.</p>
+            <p class="font-bold text-gray-900 mt-2">26.673</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- =============================== -->
+<!-- JAVASCRIPT KERANJANG BELANJA -->
+<!-- =============================== -->
+<script>
+let cart = [];
+let cartBox = document.getElementById("cart-box");
+let openCart = document.getElementById("open-cart");
+let closeCart = document.getElementById("close-cart");
+let cartItems = document.getElementById("cart-items");
+let cartTotal = document.getElementById("cart-total");
+
+// Buka keranjang
+openCart.addEventListener("click", () => {
+    cartBox.classList.remove("hidden");
+});
+
+// Tutup keranjang
+closeCart.addEventListener("click", () => {
+    cartBox.classList.add("hidden");
+});
+
+// Tambahkan ke keranjang
+function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+    cartBox.classList.remove("hidden"); // tampilkan keranjang saat produk diklik
+}
+
+// Update tampilan keranjang
+function updateCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price;
+
+        cartItems.innerHTML += `
+        <li class="flex justify-between items-center bg-gray-100 p-2 rounded-lg">
+            <span>${item.name} - ${item.price}</span>
+            <button onclick="removeItem(${index})" class="text-red-600 font-bold">×</button>
+        </li>`;
+    });
+
+    cartTotal.textContent = total;
+}
+
+// Hapus item
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+</script>
+
+</body>
+</html>
+

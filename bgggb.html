@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyzaa Foods</title>
+</head>
+
+<body class="bg-white">
+
+<!-- HEADER -->
+<header class="bg-[#FCF8F1]/30 backdrop-blur-md">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+            
+            <!-- Tulisan Lyzaa Cafe's -->
+            <a href="#" class="flex-shrink-0">
+                <h1 class="text-2xl font-bold tracking-wide text-black">
+                    Lyzaa Cafe's
+                </h1>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="makanan.html" class="text-black hover:text-opacity-80">Makanan</a>
+                <a href="minuman.html" class="text-black hover:text-opacity-80">Minuman</a>
+                <a href="snack.html" class="text-black hover:text-opacity-80">Snack</a>
+            </nav>
+
+            <a href="makanan.html" class="hidden lg:inline-flex px-5 py-2.5 text-base font-semibold text-white bg-black rounded-full hover:bg-yellow-300 hover:text-black">
+                Order Now
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- PRODUK WESTERN -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Western Foods</h2>
+      <p class="mt-4 max-w-md text-gray-500">
+        Western foods is a popular cuisine that originated in Western countries...
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- ITEM 1 -->
+      <li>
+        <button onclick="beli('Chicken Rice Bowl', 35553)" class="group block overflow-hidden text-left w-full">
+          <img src="rice bowl.jpg" class="h-[350px] w-full object-cover group-hover:scale-105 transition duration-500 sm:h-[450px]">
+
+          <div class="relative bg-white pt-3">
+            <h3 class="text-xs font-semibold">Chicken Rice Bowl</h3>
+            <p class="text-xs text-gray-700">Chicken Rice Bowl adalah hidangan...</p>
+            <p class="mt-2 text-gray-900">Rp35.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- ITEM 2 -->
+      <li>
+        <button onclick="beli('Omelet with veggies', 27890)" class="group block overflow-hidden text-left w-full">
+          <img src="omelet.jpg" class="h-[350px] w-full object-cover group-hover:scale-105 transition duration-500 sm:h-[450px]">
+
+          <div class="relative bg-white pt-3">
+            <h3 class="text-xs font-semibold">Omelet with veggies</h3>
+            <p class="text-xs text-gray-700">Omelet with veggies adalah hidangan...</p>
+            <p class="mt-2 text-gray-900">Rp27.890</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- ITEM 3 -->
+      <li>
+        <button onclick="beli('Grilled steak and potatoes', 45780)" class="group block overflow-hidden text-left w-full">
+          <img src="Steak Sirloin.jpg" class="h-[350px] w-full object-cover group-hover:scale-105 transition duration-500 sm:h-[450px]">
+          <div class="relative bg-white pt-3">
+            <h3 class="text-xs font-semibold">Grilled steak and potatoes</h3>
+            <p class="text-xs text-gray-700">Grilled steak and potatoes adalah...</p>
+            <p class="mt-2 text-gray-900">Rp45.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- ITEM 4 -->
+      <li>
+        <button onclick="beli('Spaghetti with Meat Sauce', 56573)" class="group block overflow-hidden text-left w-full">
+          <img src="Homemade Spaghetti with Meat Sauce.jpg" class="h-[350px] w-full object-cover group-hover:scale-105 transition duration-500 sm:h-[450px]">
+
+          <div class="relative bg-white pt-3">
+            <h3 class="text-xs font-semibold">Spaghetti with Meat Sauce</h3>
+            <p class="text-xs text-gray-700">Spaghetti with meat sauce adalah...</p>
+            <p class="mt-2 text-gray-900">Rp56.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- PRODUK TRADISIONAL -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Tradisional Foods</h2>
+      <p class="mt-4 max-w-md text-gray-500">
+        Traditional foods are culinary delights...
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <li>
+        <button onclick="beli('Nasi Kuning', 39553)" class="group block overflow-hidden text-left w-full">
+          <img src="nasi kuning.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Nasi Kuning</h3>
+            <p class="text-xs text-gray-700">Nasi kuning adalah hidangan...</p>
+            <p class="mt-2 text-gray-900">Rp39.553</p>
+          </div>
+        </button>
+      </li>
+
+      <li>
+        <button onclick="beli('Soto', 37690)" class="group block overflow-hidden text-left w-full">
+          <img src="soto.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Soto</h3>
+            <p class="text-xs text-gray-700">Soto adalah hidangan sup...</p>
+            <p class="mt-2 text-gray-900">Rp37.690</p>
+          </div>
+        </button>
+      </li>
+
+      <li>
+        <button onclick="beli('Rawon', 45780)" class="group block overflow-hidden text-left w-full">
+          <img src="Rawon Gurih Sedap ala Jawa Timur - Resep _ ResepKoki.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Rawon</h3>
+            <p class="text-xs text-gray-700">Rawon adalah hidangan khas...</p>
+            <p class="mt-2 text-gray-900">Rp45.780</p>
+          </div>
+        </button>
+      </li>
+
+      <li>
+        <button onclick="beli('Nasi Goreng', 36573)" class="group block overflow-hidden text-left w-full">
+          <img src="Nasi Goreng (Indonesian Fried Rice).jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+          <div class="bg-white pt-3">
+            <h3 class="text-xs font-semibold">Nasi Goreng</h3>
+            <p class="text-xs text-gray-700">Nasi goreng hangat dengan...</p>
+            <p class="mt-2 text-gray-900">Rp36.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- TOMBOL KERANJANG -->
+<button onclick="document.getElementById('keranjangPopup').classList.remove('hidden')"
+class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-xl">
+  🛒 Keranjang
+</button>
+
+<!-- POPUP KERANJANG -->
+<div id="keranjangPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl">
+    <h2 class="text-xl font-bold mb-4">Keranjang Belanja</h2>
+    <div id="isiKeranjang" class="max-h-60 overflow-y-auto border p-3 rounded"></div>
+
+    <p class="text-lg font-semibold mt-4">Total: <span id="totalHarga">Rp0</span></p>
+
+    <div class="flex justify-end gap-3 mt-4">
+      <button onclick="document.getElementById('keranjangPopup').classList.add('hidden')" class="px-4 py-2 bg-gray-300 rounded-md">Tutup</button>
+      <button onclick="alert('Checkout belum dibuat 😊')" class="px-4 py-2 bg-green-600 text-white rounded-md">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT KERANJANG -->
+<script>
+let keranjang = [];
+
+function beli(nama, harga) {
+    const produk = keranjang.find(item => item.nama === nama);
+    if (produk) {
+        produk.jumlah++;
+    } else {
+        keranjang.push({ nama, harga, jumlah: 1 });
+    }
+    tampilkanKeranjang();
+}
+
+function tampilkanKeranjang() {
+    let html = '';
+    let total = 0;
+
+    keranjang.forEach(item => {
+        total += item.harga * item.jumlah;
+        html += `
+        <div class='flex justify-between border-b py-2'>
+            <span>${item.nama} x ${item.jumlah}</span>
+            <span>Rp${(item.harga * item.jumlah).toLocaleString()}</span>
+        </div>`;
+    });
+
+    document.getElementById('isiKeranjang').innerHTML = html;
+    document.getElementById('totalHarga').innerText = 'Rp' + total.toLocaleString();
+}
+</script>
+
+</body>
+</html>

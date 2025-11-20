@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyzaa Cafe's - Promo & Keranjang</title>
+</head>
+<body class="bg-white">
+
+<!-- HEADER -->
+<header class="bg-[#FCF8F1]/30 backdrop-blur-md">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+            <a href="#" class="flex-shrink-0">
+                <h1 class="text-2xl font-bold text-black">Lyzaa Cafe's</h1>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="makanan.html" class="text-black hover:text-opacity-80">Makanan</a>
+                <a href="minuman.html" class="text-black hover:text-opacity-80">Minuman</a>
+                <a href="snack.html" class="text-black hover:text-opacity-80">Snack</a>
+            </nav>
+            <!-- Keranjang -->
+            <div class="relative">
+                <button id="cart-button" class="px-4 py-2 text-white bg-black rounded-full hover:bg-yellow-300 hover:text-black">
+                    Keranjang (<span id="cart-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- SECTION PROMO -->
+<section class="py-10 bg-pink-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-gray-800">Promo Spesial Lyza Cafe's</h2>
+            <p class="text-gray-600 mt-2">Klik gambar untuk menambahkan ke keranjang!</p>
+        </div>
+
+        <!-- Grid Flyer Portrait -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1 -->
+            <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer" onclick="addToCart('Gado Gado Salad', 30000)">
+                <img src="gado gado salad.jpg" alt="Flyer Promo 1" class="w-full h-[500px] object-cover rounded-xl mb-4"> 
+                <h3 class="text-xl font-semibold text-gray-800">Promo 30%</h3>
+                <p class="text-gray-600 text-sm mt-1">New menu Tradisional.</p>
+                <p class="text-gray-800 font-bold mt-2">Rp30.000</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer" onclick="addToCart('Es Teh', 15000)">
+                <img src="Es teh.jpg" alt="Flyer Promo 2" class="w-full h-[500px] object-cover rounded-xl mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Free Es Teh</h3>
+                <p class="text-gray-600 text-sm mt-1">Promo terbatas setiap hari jumat.</p>
+                <p class="text-gray-800 font-bold mt-2">Rp15.000</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-4 rounded-2xl shadow-md hover:shadow-xl transition cursor-pointer" onclick="addToCart('Pizza Special', 125000)">
+                <img src="7 Reasons Why Pizza Gives You Diarrhea.jpg" alt="Flyer Promo 3" class="w-full h-[500px] object-cover rounded-xl mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Weekend Special</h3>
+                <p class="text-gray-600 text-sm mt-1">ONLY 125.000.</p>
+                <p class="text-gray-800 font-bold mt-2">Rp125.000</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- KERANJANG POPUP -->
+<div id="cart-popup" class="fixed bottom-5 right-5 bg-white shadow-lg rounded-xl p-5 w-80 hidden">
+    <h3 class="text-xl font-bold mb-2">Keranjang Belanja</h3>
+    <ul id="cart-items" class="mb-3 space-y-1 text-gray-700"></ul>
+    <p class="font-semibold text-gray-800">Total: Rp<span id="cart-total">0</span></p>
+    <button onclick="closeCart()" class="mt-3 w-full px-3 py-2 bg-black text-white rounded-full hover:bg-yellow-300 hover:text-black">Tutup</button>
+</div>
+
+<!-- SCRIPT -->
+<script>
+    let cart = [];
+    let cartTotal = 0;
+
+    function addToCart(name, price) {
+        cart.push({name, price});
+        cartTotal += price;
+
+        // Update keranjang tombol
+        document.getElementById('cart-count').innerText = cart.length;
+
+        // Update popup
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        cart.forEach((item, index) => {
+            cartItems.innerHTML += `<li>${item.name} - Rp${item.price.toLocaleString()}</li>`;
+        });
+        document.getElementById('cart-total').innerText = cartTotal.toLocaleString();
+
+        // Tampilkan popup
+        document.getElementById('cart-popup').classList.remove('hidden');
+    }
+
+    function closeCart() {
+        document.getElementById('cart-popup').classList.add('hidden');
+    }
+
+    // Klik tombol keranjang untuk toggle popup
+    document.getElementById('cart-button').addEventListener('click', () => {
+        const popup = document.getElementById('cart-popup');
+        popup.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>

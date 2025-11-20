@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyzaa Cafe's</title>
+</head>
+
+<body class="bg-[#ffb6c1]">
+
+<!-- HEADER -->
+<header class="bg-[#FCF8F1]/30 backdrop-blur-md">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+
+            <!-- BRAND TEXT -->
+            <a href="#" class="flex-shrink-0">
+                <h1 class="text-2xl font-bold text-gray-900 tracking-wide">
+                    Lyzaa Cafe's
+                </h1>
+            </a>
+
+            <button class="inline-flex p-2 text-black lg:hidden hover:bg-gray-100 rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                </svg>
+            </button>
+
+            <nav class="hidden lg:flex items-center space-x-10">
+                <a href="makanan.html" class="text-black hover:text-opacity-80">Makanan</a>
+                <a href="minuman.html" class="text-black hover:text-opacity-80">Minuman</a>
+                <a href="snack.html" class="text-black hover:text-opacity-80">Snack</a>
+            </nav>
+
+            <a href="ordernow.html" class="hidden lg:inline-flex px-5 py-2.5 text-base font-semibold text-white bg-black rounded-full hover:bg-yellow-300 hover:text-black">
+                Order Now
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Produk1 -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Snack's</h2>
+
+      <p class="mt-4 max-w-md text-gray-500">
+       A snack is a small portion of food eaten between meals to satisfy hunger or provide a quick burst of energy.
+..
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      
+      <!-- Doughnut burger -->
+      <li>
+        <button onclick="beli('Dought burger', 15553)" class="group block overflow-hidden text-left w-full">
+          <img src="Burger Donuts.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Doughnut burger</h3>
+            <p class="text-xs text-gray-700">Burger berbentuk donat yang menghadirkan tampilan unik dengan rasa lezat dan juicy di setiap gigitannya.
+</p>
+            <p class="mt-2 text-gray-900">Rp35.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Waffle -->
+      <li>
+        <button onclick="beli('waffle', 21890)" class="group block overflow-hidden text-left w-full">
+          <img src="waffle.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Waffle's</h3>
+            <p class="text-xs text-gray-700">Waffle adalah kudapan manis dengan tekstur renyah di luar dan lembut di dalam, disajikan dengan berbagai topping yang menggugah selera.
+.</p>
+            <p class="mt-2 text-gray-900">Rp21.690</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Pancake -->
+      <li>
+        <button onclick="beli('pancake', 27780)" class="group block overflow-hidden text-left w-full">
+          <img src="pancake.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Pancaka</h3>
+            <p class="text-xs text-gray-700">Pancake adalah kue datar yang lembut dan fluffy, biasanya disajikan hangat dengan sirup, buah, atau topping favorit.
+.</p>
+            <p class="mt-2 text-gray-900">Rp29.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Ice cream Oreo -->
+      <li>
+        <button onclick="beli('Helado de oreo', 16573)" class="group block overflow-hidden text-left w-full">
+          <img src="Helado de Oreo.jpg" class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Oreo ice cream</h3>
+            <p class="text-xs text-gray-700">Es krim Oreo adalah hidangan dingin creamy dengan potongan biskuit Oreo renyah yang memberikan perpaduan rasa manis dan tekstur crunchy..</p>
+            <p class="mt-2 text-gray-900">Rp22.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- Produk2 -->
+<section>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Snack's</h2>
+
+      <p class="mt-4 max-w-md text-gray-500">
+        A snack is a small portion of food eaten between meals to satisfy hunger or provide a quick burst of energy.
+...
+      </p>
+    </header>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Rolled crepes -->
+      <li>
+        <button onclick="beli('Rolled Crepes', 9553)" class="group block overflow-hidden text-left w-full">
+          <img src="handmade chocolate-filled rolled crêpes - Copy - Copy.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Rolled crepes</h3>
+            <p class="text-xs text-gray-700">Crepes roll vla adalah kue gulung tipis yang lembut, diisi dengan vla manis dan creamy, menciptakan perpaduan rasa yang lezat di setiap gigitan..</p>
+            <p class="mt-2 text-gray-900">Rp21.553</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Churros -->
+      <li>
+        <button onclick="beli('Churros', 7690)" class="group block overflow-hidden text-left w-full">
+          <img src="Gluten free & Vegan Churros.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Churros</h3>
+            <p class="text-xs text-gray-700">Minuman herbal Indonesia dengan rempah kaya manfaat.</p>
+            <p class="mt-2 text-gray-900">Rp27.690</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Bao Buns -->
+      <li>
+        <button onclick="beli('Bao buns', 5780)" class="group block overflow-hidden text-left w-full">
+          <img src="Gluten-Free Bao Buns [Steamed Chinese Baozi].jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Bao Buns</h3>
+            <p class="text-xs text-gray-700">Bao bun adalah roti kukus lembut berisi isian gurih yang juicy, menciptakan sensasi rasa hangat dan nikmat dalam setiap gigitan..</p>
+            <p class="mt-2 text-gray-900">Rp25.780</p>
+          </div>
+        </button>
+      </li>
+
+      <!-- Grilled corn salad -->
+      <li>
+        <button onclick="beli('Grilled corn salad', 6573)" class="group block overflow-hidden text-left w-full">
+          <img src="Grilled Corn Salad.jpg" class="h-[350px] w-full object-cover sm:h-[450px]">
+
+          <div class="bg-white pt-3">
+            <h3 class="text-xs text-gray-900">Grilled corn salad</h3>
+            <p class="text-xs text-gray-700">Grilled corn salad adalah salad segar dengan jagung panggang manis yang berpadu dengan sayuran renyah, menciptakan rasa smoky yang lezat dan menyegarkan..</p>
+            <p class="mt-2 text-gray-900">Rp6.573</p>
+          </div>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+<!-- TOMBOL KERANJANG -->
+<button onclick="document.getElementById('keranjangPopup').classList.remove('hidden')" 
+class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-xl">
+  🛒 Keranjang
+</button>
+
+<!-- POPUP KERANJANG -->
+<div id="keranjangPopup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl">
+    <h2 class="text-xl font-bold mb-4">Keranjang Belanja</h2>
+
+    <div id="isiKeranjang" class="max-h-60 overflow-y-auto border p-3 rounded"></div>
+
+    <p class="text-lg font-semibold mt-4">Total: <span id="totalHarga">Rp0</span></p>
+
+    <div class="flex justify-end gap-3 mt-4">
+      <button onclick="document.getElementById('keranjangPopup').classList.add('hidden')" class="px-4 py-2 bg-gray-300 rounded-md">Tutup</button>
+  </div>
+</div>
+
+
+<!-- SCRIPT KERANJANG -->
+<script>
+let keranjang = [];
+
+function beli(nama, harga) {
+    const item = keranjang.find(i => i.nama === nama);
+    if (item) {
+        item.jumlah++;
+    } else {
+        keranjang.push({ nama, harga, jumlah: 1 });
+    }
+    tampilkanKeranjang();
+}
+
+function tampilkanKeranjang() {
+    let html = "";
+    let total = 0;
+
+    keranjang.forEach(item => {
+        total += item.harga * item.jumlah;
+
+        html += `
+          <div class="flex justify-between border-b py-2">
+              <span>${item.nama} x ${item.jumlah}</span>
+              <span>Rp${(item.harga * item.jumlah).toLocaleString()}</span>
+          </div>
+        `;
+    });
+
+    document.getElementById("isiKeranjang").innerHTML = html;
+    document.getElementById("totalHarga").innerText = "Rp" + total.toLocaleString();
+}
+</script>
+
+</body>
+</html>
